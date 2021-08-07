@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .repo {
   background: #F2F2F2;
-  padding: 22px 80px 22px 15px;
+  padding: 22px 15px 22px 15px;
   border-radius: 5px;
   display: inline-block;
   box-shadow: 0px 5px 9px #8d8d8ddb;
@@ -72,6 +72,13 @@ export default {
   .repo {
     text-align: center;
     padding: 22px 50px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .repo {
+    width: 650px;
   }
 }
 
@@ -79,17 +86,18 @@ export default {
   .repo {
     text-align: center;
     padding: 22px 15px;
+    width: 310px;
   }
 }
 
 .repo__title {
   text-transform: uppercase;
   margin-bottom: 8px;
+  overflow-wrap: anywhere;
 }
 
 .repo__img {
   border-radius: 7px;
-  overflow: hidden;
   margin-right: 36px;
   width: 105px;
 }
@@ -111,7 +119,7 @@ export default {
 }
 
 .avatar {
-  width: 100%;
+  width: 105px;
   border-radius: 7px;
 }
 
@@ -140,11 +148,6 @@ export default {
   margin-right: 14px;
 }
 
-@media (max-width: 768px) {
-  .tag {
-    margin: 0 auto;
-  }
-}
 
 @media (max-width: 768px) {
   .tags {

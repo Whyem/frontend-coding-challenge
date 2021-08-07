@@ -1,13 +1,15 @@
 <template>
-  <Repos v-for="(repo, index) in repos" :key="repo.id" 
-  :img="repo.owner.avatar_url" 
-  :name="repo.name" 
-  :description="repo.description" 
-  :stars="repo.stargazers_count" 
-  :issues="repo.open_issues_count"
-  :username="repo.owner.login"
-  :userlink="repo.owner.url" 
-  :index = "index"/>
+  <div v-for="(repo, index) in repos" :key="repo.id">
+    <Repos  
+    :img="repo.owner.avatar_url" 
+    :name="repo.name" 
+    :description="repo.description" 
+    :stars="repo.stargazers_count" 
+    :issues="repo.open_issues_count"
+    :username="repo.owner.login"
+    :userlink="repo.owner.url" 
+    :index = "index"/>
+  </div>
 </template>
 
 <script>
