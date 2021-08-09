@@ -4,6 +4,13 @@
 The task is to implement a small webapp that will list the most starred Github repos that were created in the last 30 days. 
 You'll be fetching the sorted JSON data directly from the Github API (Github API explained down below). 
 
+## How To Install
+I used Vue js to create this webapp, to install you need to run the following commands:
+
+1- npm install
+
+2- npm run serve
+
 ## Features
 * As a User I should be able to list the most starred Github repos that were created in the last 30 days. 
 * As a User I should see the results as a list. One repository per row. 
