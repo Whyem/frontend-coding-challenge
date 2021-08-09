@@ -8,7 +8,7 @@
                 <div class="repo__text">  
                     <div class="text_block">
                         <h1 class="repo__title">{{ name }}</h1>
-                        <p class="repo__description">{{ description }}</p>
+                        <p class="repo__description" v-bind:class="{ white: (index == 0 || index == 1 || index == 2)}">{{ description }}</p>
                     </div>
     
                     <div class="fd-bm flex--ai">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
     
-                        <div class="submitted">
+                        <div class="submitted" v-bind:class="{ white: (index == 0 || index == 1 || index == 2)}">
                             Submitted 30 days ago by <a :href="userlink" class="user_link">{{ username }}</a>
                         </div>
                     </div>
@@ -43,8 +43,8 @@ export default {
     img: String,
     name: String,
     description: String,
-    stars: String,
-    issues: String,
+    stars: Number,
+    issues: Number,
     username: String,
     userlink: String,
   },
@@ -66,6 +66,11 @@ export default {
   box-shadow: 0px 5px 9px #8d8d8ddb;
   text-align: left;
   margin-bottom: 26px;
+  transition: all .4s ease-in-out;
+}
+
+.repo:hover { 
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -94,6 +99,8 @@ export default {
   text-transform: uppercase;
   margin-bottom: 8px;
   overflow-wrap: anywhere;
+  color: black;
+
 }
 
 .repo__img {
@@ -156,12 +163,16 @@ export default {
   }
 }
 
+.white{
+  color: white !important;
+}
+
 .yellow {
   color: #FFE532;
 }
 
 .user_link {
-  color: #EF2D2D;
+  color: #ff0000;
 }
 
 .submitted {
@@ -178,6 +189,6 @@ export default {
 }
 
 .bronze{
-  background: #D46900;
+  background: #f1953a;
 }
 </style>
